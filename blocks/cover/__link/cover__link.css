@@ -1,0 +1,32 @@
+.cover__link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vw / 1.6);
+    /*Например 1184/1,6 = получаем 740px, так со всеми разрешениями картинки (1024/1,6=640)*/
+}
+
+.cover__link::before {
+    content: "";
+    background: #2A2C2F;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;    
+}
+
+.cover__link:hover::before {
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 1280px) {
+    .cover__link {
+        min-height: 740px; 
+    }    
+}
